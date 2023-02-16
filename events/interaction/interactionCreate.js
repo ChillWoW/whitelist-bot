@@ -23,7 +23,7 @@ module.exports = {
       command.execute(interaction, client);
     } else if (interaction.isButton()) {
       await wl_model.findOneAndDelete(
-        { MessageID: interaction.message.id },
+        { MessageID: message.id },
         function (err, data) {
           if (err) return console.log(err);
           if (data) {
